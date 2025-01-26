@@ -5,20 +5,20 @@
 class Progen < Formula
   desc "Project Generator CLI"
   homepage "https://github.com/sivaprasadreddy/progen"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
-    on_intel do
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.6/progen_darwin_x86_64.tar.gz"
-      sha256 "b82f73514ef784d5578b5da8d0c9ffc88c86485dfa419687858e6a3354527d94"
+    if Hardware::CPU.intel?
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.7/progen_darwin_x86_64.tar.gz"
+      sha256 "6ba9dd8bd0083d9c565d24774b81d522980969c6d35d3fb16ede07fb333ba5f5"
 
       def install
         bin.install "progen"
       end
     end
-    on_arm do
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.6/progen_darwin_arm64.tar.gz"
-      sha256 "9da65c449a7af5ba5a7d333cb263bfbbe68c08b1f8742759d91818a70f0305b8"
+    if Hardware::CPU.arm?
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.7/progen_darwin_arm64.tar.gz"
+      sha256 "3f40f82d5653a8ed073e102e8b2a11d69515637c5fdd976fd9de75262be2772a"
 
       def install
         bin.install "progen"
@@ -27,20 +27,20 @@ class Progen < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.6/progen_linux_x86_64.tar.gz"
-        sha256 "50eca7a6be6ddb5a5a286aa93739b71388a178f88b6cde451abd5fd761f55aa7"
+        url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.7/progen_linux_x86_64.tar.gz"
+        sha256 "0629be5277c02b4f0f1c1760d4c6fc0140bc020051029713f64e5def958418f3"
 
         def install
           bin.install "progen"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.6/progen_linux_arm64.tar.gz"
-        sha256 "2eca71f5f3a872c7519d1a073e56b66a6f7774bac4974e3bf876f1bdc7af406d"
+        url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.7/progen_linux_arm64.tar.gz"
+        sha256 "61d573032d565edae33fb65b5edaa06199f6433bc000f3e3432849aaeaa2a7f9"
 
         def install
           bin.install "progen"
