@@ -5,20 +5,20 @@
 class Progen < Formula
   desc "Project Generator CLI"
   homepage "https://github.com/sivaprasadreddy/progen"
-  version "0.0.9"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.9/progen_darwin_x86_64.tar.gz"
-      sha256 "448beab05276763806a8655c089ffed03d8c41173f4f3ad1193892f6975f60d5"
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.0/progen_darwin_x86_64.tar.gz"
+      sha256 "3d11cbad2b901877cc5cc924741f954c004bff964ac95b70903012c2f4207d68"
 
       def install
         bin.install "progen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.9/progen_darwin_arm64.tar.gz"
-      sha256 "fe48eaf46f23de4b11bacbc74710c04c3ea185e0f9e192519fc869751ea7d6ad"
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.0/progen_darwin_arm64.tar.gz"
+      sha256 "1b163b12767ce4e966b51e3ae147ec4355f5f06796f07ba01a57b580d03478d7"
 
       def install
         bin.install "progen"
@@ -28,15 +28,15 @@ class Progen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.9/progen_linux_x86_64.tar.gz"
-      sha256 "a1c6c64800abd629c4958680b46d52114e1610d2f468f135e817dac5bd7026a6"
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.0/progen_linux_x86_64.tar.gz"
+      sha256 "c3cbd348164928781728525fdb7be52a870c3da91aef4c001e4951f36fa603ac"
       def install
         bin.install "progen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v0.0.9/progen_linux_arm64.tar.gz"
-      sha256 "54debc7506a55fa2b935c697451a67106b17d6911a16e772f1e316b7c28c3087"
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.0/progen_linux_arm64.tar.gz"
+      sha256 "80ed42b17b836bc916836f560a543e4fd224f7860695d74429379e984bb6a2f7"
       def install
         bin.install "progen"
       end
