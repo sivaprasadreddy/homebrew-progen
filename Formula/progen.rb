@@ -5,20 +5,20 @@
 class Progen < Formula
   desc "Project Generator CLI"
   homepage "https://github.com/sivaprasadreddy/progen"
-  version "1.0.4"
+  version "1.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.4/progen_darwin_x86_64.tar.gz"
-      sha256 "8674b41a5a5f1aebd626192184571a80efdab767e610bcdce1b8b767993d3e5c"
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.5/progen_darwin_x86_64.tar.gz"
+      sha256 "f9d2f8e0f0e8d90ef0a88af7f0f474e712c1b7e4258960fdcbf866d861697465"
 
       define_method(:install) do
         bin.install "progen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.4/progen_darwin_arm64.tar.gz"
-      sha256 "7a3a678d35ba9235455673ec6a6e515dca0c606311c07d4186d9bf241d65276f"
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.5/progen_darwin_arm64.tar.gz"
+      sha256 "b9fe068e961aced1756e05d75cb364f4de5a190ea7356a70b8109c16479d3f92"
 
       define_method(:install) do
         bin.install "progen"
@@ -28,15 +28,15 @@ class Progen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.4/progen_linux_x86_64.tar.gz"
-      sha256 "b5373dde1b2a3d5380a63b7f10fc4283e8297c70f3d5838ab63e31ed64df786b"
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.5/progen_linux_x86_64.tar.gz"
+      sha256 "ce271f1f6bfb2f6dc41d7f1c0d2bb92559571e781d2ef92305982e41a2adb6b1"
       define_method(:install) do
         bin.install "progen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.4/progen_linux_arm64.tar.gz"
-      sha256 "d70b82ef7da93172f26cef43c50a659900674df6387cbec340adb875658f519e"
+      url "https://github.com/sivaprasadreddy/progen/releases/download/v1.0.5/progen_linux_arm64.tar.gz"
+      sha256 "c7ce8c79fee4a1d0e4daddb784de89e479f2f8eb4f9be72f4d4eb2f6cea7b222"
       define_method(:install) do
         bin.install "progen"
       end
